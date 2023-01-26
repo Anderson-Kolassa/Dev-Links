@@ -32,6 +32,7 @@ body{
 
     /*background: color image repeat position/size*/
     background:var(--bg-url) no-repeat top center/cover; /*ISSO E UMA SHORTHAND*/
+    height:100vh;
 }
 
 body * {
@@ -163,4 +164,18 @@ ul li a:hover{
 footer {
     padding:24px 0;
     text-align:center;
+}
+
+
+/* MEDIA QUERIES */
+
+@media(min-width:700px){
+    :root{
+        --bg-url:url(./assets/bg-desktop-dark.jpg);
+    }
+
+
+    .light{
+        --bg-url:url(./assets/bg-desktop-light.jpg);
+    }
 }
