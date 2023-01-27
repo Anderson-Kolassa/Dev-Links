@@ -87,10 +87,15 @@ body * {
     left:0;
     z-index:1; /*SUBIU UM ANDAR*/
     transform:translateY(-50%);
+
+    animation:slide-back .2s;
 }
 .light #switch button {
-    right:0;
-    left:initial;
+    animation: slide-in .2s forwards; /* FORWARDS mantem a animation slide-in em 50% para nao haver o reset do botao  */
+}
+
+#switch button:hover{
+    outline:8px solid var(--highlight-color);
 }
 
 #switch span{
@@ -177,5 +182,30 @@ footer {
 
     .light{
         --bg-url:url(./assets/bg-desktop-light.jpg);
+    }
+}
+
+/* ANIMATION*/
+
+@keyframes slide-in{
+    from{
+        left:0;
+    }
+
+    to{
+        left:50%;
+    }
+}
+
+
+
+@keyframes slide-back{
+   
+    from{
+        left:50%;
+    }
+
+    to{
+        left:0%;
     }
 }
